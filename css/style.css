@@ -1,0 +1,616 @@
+/* Tổng thể */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.main-header {
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+/* Icons */
+.social-icons a, .icon-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover, .icon-link:hover {
+    color: #666;
+}
+
+/* Logo */
+.logo-container {
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 0 20px;
+    z-index: 10;
+}
+
+.main-logo {
+    height: 40px; /* Harry có thể chỉnh lại cho vừa mắt */
+}
+
+.logo-subtext {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #ccc;
+    margin-top: 12px;
+    text-transform: uppercase;
+}
+
+/* Divider & Cart */
+.divider {
+    height: 20px;
+    width: 1px;
+    background-color: #eee;
+    margin: 0 15px;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #f3d282; /* Màu vàng cam giống hình */
+    color: #000;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* Navigation Menu */
+.header-nav {
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.nav-list li {
+    margin-right: 30px;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.nav-list a:hover {
+    color: #000;
+}
+
+/* ==== PHẦN 2: 3 BANNER SẢN PHẨM ==== */
+
+.banner-item {
+    overflow: hidden;
+}
+
+.banner-img {
+    transition: 0.4s ease;
+}
+
+.banner-item:hover .banner-img {
+    transform: scale(1.05);
+}
+
+/* Text trên hình */
+.banner-text {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+}
+
+.banner-text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+}
+
+/* Nút BUY NOW */
+.buy-btn {
+    margin-top: 15px;
+    padding: 10px 30px;
+    background: white;
+    border: 1px solid black;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.buy-btn:hover {
+    background: black;
+    color: white;
+}
+
+/* ==== PHẦN 3: FEATURE BOX ==== */
+
+.feature-box h5 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.feature-box p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* Hiệu ứng shadow cho nút BUY NOW */
+.buy-btn {
+    margin-top: 15px;
+    padding: 10px 30px;
+    background: white;
+    border: 1px solid black;
+    font-weight: 600;
+    transition: 0.2s;
+    box-shadow: 3px 3px 0px #000; /* Shadow giống mẫu */
+}
+
+.buy-btn:hover {
+    background: black;
+    color: white;
+    box-shadow: none; /* Khi hover thì mất bóng đúng theo mẫu */
+}
+
+/* ==== PHẦN 5: SPLIT BANNER BACKPACKS ==== */
+
+.backpack-section {
+    margin-top: 50px;
+    background-color: #f6f6f6; /* Màu nền nhạt để tiệp với ảnh mẫu */
+}
+
+.split-banner-item img {
+    display: block;
+    object-fit: cover;
+    height: auto;
+}
+
+/* Lớp đè nội dung lên giữa hai ảnh */
+.backpack-content-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 10;
+}
+
+.backpack-content-overlay h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #000;
+
+}
+
+.backpack-content-overlay p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Nút bấm màu trắng trong suốt nhẹ hoặc trắng đục theo mẫu */
+.btn-split {
+    display: inline-block;
+    padding: 12px 40px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border: none;
+    min-width: 150px;
+}
+
+.btn-split:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .backpack-content-overlay {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        padding: 40px 20px;
+    }
+    
+    .backpack-content-overlay h2 {
+        font-size: 20px;
+    }
+}
+
+/* ==== PHẦN 6: TAB PRODUCT NAVIGATION ==== */
+
+.product-tabs .section-title h2 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* Tùy chỉnh thanh Tab giống mẫu */
+.product-tabs .nav-tabs {
+    border-bottom: 1px solid #eee !important;
+}
+
+.product-tabs .nav-link {
+    color: #999; /* Màu chữ nhạt cho Tab không chọn */
+    font-weight: 700;
+    font-size: 16px;
+    border: none !important;
+    padding: 10px 30px;
+    background: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+.product-tabs .nav-link:hover {
+    color: #000;
+}
+
+/* Hiệu ứng gạch chân đen khi Active */
+.product-tabs .nav-link.active {
+    color: #000 !important;
+    background: none !important;
+}
+
+.product-tabs .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: 0.3s;
+}
+
+.product-tabs .nav-link.active::after {
+    width: 100%; /* Gạch chân chạy hết chiều ngang của Tab */
+}
+
+/* ==== CHI TIẾT SẢN PHẨM TRONG TAB ==== */
+
+.product-item {
+    text-align: left;
+}
+
+.product-img {
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.product-img img {
+    transition: transform 0.5s ease;
+}
+
+.product-item:hover .product-img img {
+    transform: scale(1.05);
+}
+
+.product-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.stars {
+    font-size: 12px;
+    color: #000;
+}
+
+.price {
+    font-size: 15px;
+    color: #000;
+}
+
+/* Nút điều hướng tròn trắng như hình mẫu */
+.custom-nav-btn {
+    width: 45px;
+    height: 45px;
+    background-color: #fff !important;
+    color: #000 !important;
+    border-radius: 50%;
+    border: 1px solid #eee !important;
+    opacity: 1 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 40%;
+    z-index: 5;
+}
+
+.carousel-control-prev.custom-nav-btn {
+    left: -20px;
+}
+
+.carousel-control-next.custom-nav-btn {
+    right: -20px;
+}
+
+.custom-nav-btn:hover {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+/* ==== PHẦN 7: DENIM COLLECTION BANNER ==== */
+
+.denim-wrapper {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.denim-bg {
+    min-height: 450px; /* Đảm bảo chiều cao banner đủ rộng */
+    object-fit: cover;
+}
+
+.denim-content {
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    padding: 0 15px;
+}
+
+.denim-content h2 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+.collection-desc {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Nút bấm trắng giống mẫu */
+.btn-denim {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.btn-denim:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Responsive cho Mobile */
+@media (max-width: 768px) {
+    .denim-content h2 {
+        font-size: 24px;
+    }
+    .collection-desc {
+        font-size: 12px;
+        br { display: none; } /* Bỏ ngắt dòng trên mobile */
+    }
+    .btn-denim {
+        padding: 10px 20px;
+        font-size: 11px;
+    }
+}
+
+/* ==== PHẦN 8: SUMMER TRENDING ==== */
+
+.trend-card {
+    background: #fff;
+}
+
+.trend-img img {
+    height: 700px; /* Điều chỉnh chiều cao cho giống mẫu ảnh dài */
+    object-fit: cover;
+}
+
+.trend-title {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #333;
+}
+
+.trend-price {
+    font-size: 14px;
+}
+
+/* Kỹ thuật xử lý vòng tròn lồng nhau */
+.color-swatches {
+    margin-top: 5px;
+}
+
+.swatch-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #fff; /* Tạo viền trắng để thấy độ lồng nhau */
+    object-fit: cover;
+    margin-left: -10px; /* Đây là chìa khóa để lồng vào nhau */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.swatch-circle:first-child {
+    margin-left: 0; /* Vòng tròn đầu tiên không lùi */
+}
+
+.swatch-circle:hover {
+    transform: translateY(-5px);
+    z-index: 10;
+}
+
+/* ==== PHẦN 9: LET'S BE FRIENDS ==== */
+
+.lets-be-friends h2 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+.lets-be-friends {
+    border-top: 3px solid gainsboro;
+}
+
+.social-info p {
+    font-size: 15px;
+    color: #333;
+}
+
+.social-info a {
+    transition: 0.3s;
+}
+
+.social-info a:hover {
+    color: #888 !important;
+}
+
+.sub-text {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+/* Khoảng cách giữa các dòng chữ nhỏ */
+.social-info p {
+    margin-bottom: 8px;
+}
+
+/* ==== FIX LỖI CHIỀU CAO ẢNH INSTAGRAM ==== */
+.insta-img {
+    height: 350px; /* Harry có thể chỉnh con số này cho vừa mắt */
+    object-fit: cover; /* Quan trọng: giúp ảnh không bị méo khi ép chiều cao */
+    display: block;
+}
+
+/* ==== NÚT BACK TO TOP CHUYÊN NGHIỆP ==== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #000;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* Hiệu ứng cuộn mượt mà cho toàn trang */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==== INSTAGRAM & FOOTER ==== */
+
+.insta-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.insta-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.insta-item:hover .insta-overlay {
+    opacity: 1;
+}
+
+.main-footer {
+    background-color: #f9f8f4; /* Màu nền kem nhạt giống mẫu */
+    color: #000;
+}
+
+.footer-heading {
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #555;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #000;
+    padding-left: 5px;
+}
+
+.newsletter-form input {
+    border: 1px solid #ccc;
+    font-size: 13px;
+}
+
+.newsletter-form button {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.social-links i {
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.social-links i:hover {
+    color: #888;
+}
+
+.footer-bottom {
+    padding-top: 10px;
+}
